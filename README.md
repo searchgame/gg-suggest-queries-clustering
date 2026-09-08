@@ -1,1 +1,1 @@
-# Google Suggest Queries Clustering with local Ollama models
+# Google Suggest Queries Clustering (with local Ollama models)
