@@ -23,7 +23,7 @@ from suggests import config, export, fetch, labels as lbl, modifiers, ollama
 from suggests.config import ClusterConfig, LabelConfig, VizConfig
 from suggests.text import safe_filename
 
-st.set_page_config(page_title="Google Suggest Clustering", page_icon="🔠", layout="wide")
+st.set_page_config(page_title="Google Suggest Queries Clustering Tool", page_icon="🫧", layout="wide")
 
 # st.cache_data cannot hash a NumPy array on its own. Registering it once here
 # is cleaner than threading digest strings through every cached signature.
