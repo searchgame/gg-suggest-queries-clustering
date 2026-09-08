@@ -1,0 +1,80 @@
+{
+  "_readme": [
+    "Per-language seed modifiers and stopwords. Edit this file to tune coverage;",
+    "no Python change is needed. Always save as UTF-8.",
+    "",
+    "alphabet  - word-INITIAL letters only, since a letter seed means 'the next",
+    "            word starts with this'. German therefore adds ae/oe/ue but never",
+    "            eszett, which no German word begins with.",
+    "stopwords - casefolded. Used to keep cluster labels readable. The modifier",
+    "            terms below are unioned in automatically, so do not repeat them.",
+    "pos       - prefix | suffix | both. Question words go BEFORE the seed in all",
+    "            six languages; putting them after produces dead grammar."
+  ],
+
+  "en": {
+    "alphabet": "abcdefghijklmnopqrstuvwxyz",
+    "stopwords": ["a", "an", "the", "and", "or", "but", "if", "of", "to", "in", "on", "at", "by", "as", "is", "are", "was", "were", "be", "been", "am", "do", "does", "did", "have", "has", "had", "it", "its", "this", "that", "these", "those", "there", "here", "i", "you", "he", "she", "we", "they", "my", "your", "his", "her", "our", "their", "not", "no", "so", "than", "then", "too", "very", "just", "up", "out", "off", "into", "some", "any", "all", "more", "most", "s", "t", "re", "ve", "ll", "d", "m"],
+    "categories": {
+      "questions": {"pos": "prefix", "terms": ["what", "how", "why", "who", "when", "where", "which", "is", "are", "can", "does", "do", "should", "will", "did", "how to", "what is"]},
+      "prepositions": {"pos": "both", "terms": ["for", "with", "without", "near", "in", "on", "to", "from", "like", "after", "before", "during", "under", "over", "about"]},
+      "comparatives": {"pos": "suffix", "terms": ["vs", "versus", "or", "alternative to", "better than", "instead of", "compared to"]},
+      "commercial": {"pos": "suffix", "terms": ["price", "cost", "cheap", "best", "review", "reviews", "buy", "free", "discount", "near me"]}
+    }
+  },
+
+  "fr": {
+    "alphabet": "abcdefghijklmnopqrstuvwxyzéàç",
+    "stopwords": ["le", "la", "les", "un", "une", "des", "de", "du", "d", "l", "et", "ou", "mais", "si", "à", "au", "aux", "en", "dans", "sur", "sous", "pour", "par", "avec", "sans", "ce", "cet", "cette", "ces", "qui", "que", "quoi", "dont", "où", "est", "sont", "était", "être", "avoir", "ai", "a", "ont", "je", "tu", "il", "elle", "nous", "vous", "ils", "elles", "on", "ne", "pas", "plus", "y", "se", "son", "sa", "ses", "mon", "ma", "mes", "notre", "votre", "vos", "leur", "leurs", "comme", "tout", "tous", "toute", "toutes", "c", "j", "n", "s", "qu", "m", "t"],
+    "categories": {
+      "questions": {"pos": "prefix", "terms": ["comment", "pourquoi", "quand", "où", "quel", "quelle", "quels", "quelles", "combien", "est-ce que", "qu'est-ce que", "faut-il", "peut-on", "comment faire"]},
+      "prepositions": {"pos": "both", "terms": ["pour", "avec", "sans", "près de", "chez", "dans", "sur", "contre", "après", "avant", "comme", "en", "depuis", "pendant", "sous"]},
+      "comparatives": {"pos": "suffix", "terms": ["ou", "vs", "contre", "alternative à", "mieux que", "au lieu de", "comparé à"]},
+      "commercial": {"pos": "suffix", "terms": ["prix", "tarif", "pas cher", "meilleur", "meilleure", "avis", "test", "acheter", "gratuit", "promo", "près de moi"]}
+    }
+  },
+
+  "de": {
+    "alphabet": "abcdefghijklmnopqrstuvwxyzäöü",
+    "stopwords": ["der", "die", "das", "den", "dem", "des", "ein", "eine", "einen", "einem", "einer", "eines", "und", "oder", "aber", "wenn", "von", "zu", "zum", "zur", "in", "im", "an", "am", "auf", "aus", "bei", "mit", "nach", "vor", "über", "unter", "für", "ohne", "ist", "sind", "war", "waren", "sein", "haben", "hat", "habe", "ich", "du", "er", "sie", "es", "wir", "ihr", "nicht", "kein", "keine", "man", "sich", "auch", "noch", "nur", "so", "als", "wie", "wird", "werden", "denn", "doch", "schon", "mehr"],
+    "categories": {
+      "questions": {"pos": "prefix", "terms": ["was", "wie", "warum", "wer", "wann", "wo", "welche", "welcher", "welches", "wieso", "weshalb", "ist", "kann", "darf", "soll", "muss", "gibt es", "wie viel"]},
+      "prepositions": {"pos": "both", "terms": ["für", "mit", "ohne", "bei", "in", "an", "auf", "aus", "nach", "vor", "über", "unter", "gegen", "wie", "seit", "trotz"]},
+      "comparatives": {"pos": "suffix", "terms": ["oder", "vs", "gegen", "alternative zu", "besser als", "statt", "im vergleich"]},
+      "commercial": {"pos": "suffix", "terms": ["preis", "kosten", "günstig", "beste", "test", "erfahrungen", "kaufen", "kostenlos", "angebot", "in der nähe"]}
+    }
+  },
+
+  "nl": {
+    "alphabet": "abcdefghijklmnopqrstuvwxyz",
+    "stopwords": ["de", "het", "een", "en", "of", "maar", "als", "van", "te", "in", "op", "aan", "bij", "met", "voor", "door", "over", "onder", "uit", "naar", "is", "zijn", "was", "waren", "heeft", "hebben", "had", "ik", "jij", "je", "hij", "zij", "ze", "wij", "we", "jullie", "u", "niet", "geen", "ook", "nog", "dat", "dit", "die", "deze", "wat", "er", "om", "zo", "meer", "al", "dan", "wel"],
+    "categories": {
+      "questions": {"pos": "prefix", "terms": ["wat", "hoe", "waarom", "wie", "wanneer", "waar", "welke", "welk", "hoeveel", "is", "kan", "mag", "moet", "zijn", "hoe werkt"]},
+      "prepositions": {"pos": "both", "terms": ["voor", "met", "zonder", "bij", "in", "op", "aan", "uit", "na", "tegen", "over", "onder", "tijdens", "sinds"]},
+      "comparatives": {"pos": "suffix", "terms": ["of", "vs", "tegen", "alternatief voor", "beter dan", "in plaats van", "vergeleken met"]},
+      "commercial": {"pos": "suffix", "terms": ["prijs", "kosten", "goedkoop", "beste", "review", "ervaringen", "kopen", "gratis", "aanbieding", "in de buurt"]}
+    }
+  },
+
+  "it": {
+    "alphabet": "abcdefghijklmnopqrstuvwxyzè",
+    "stopwords": ["il", "lo", "la", "i", "gli", "le", "un", "uno", "una", "di", "del", "dello", "della", "dei", "degli", "delle", "a", "al", "allo", "alla", "ai", "agli", "alle", "da", "dal", "in", "nel", "nella", "con", "su", "sul", "per", "tra", "fra", "e", "o", "ma", "se", "che", "chi", "cui", "non", "è", "sono", "era", "essere", "ho", "ha", "hanno", "io", "tu", "lui", "lei", "noi", "voi", "loro", "si", "come", "più", "anche", "ci", "ne", "l", "d"],
+    "categories": {
+      "questions": {"pos": "prefix", "terms": ["come", "perché", "quando", "dove", "chi", "quale", "quali", "quanto", "quanti", "cosa", "che cosa", "si può", "come fare"]},
+      "prepositions": {"pos": "both", "terms": ["per", "con", "senza", "vicino", "in", "su", "da", "a", "dopo", "prima", "contro", "durante", "sotto", "sopra"]},
+      "comparatives": {"pos": "suffix", "terms": ["o", "vs", "contro", "alternativa a", "meglio di", "invece di", "rispetto a"]},
+      "commercial": {"pos": "suffix", "terms": ["prezzo", "costo", "economico", "migliore", "recensioni", "opinioni", "comprare", "gratis", "offerta", "vicino a me"]}
+    }
+  },
+
+  "es": {
+    "alphabet": "abcdefghijklmnopqrstuvwxyzáéíóú",
+    "stopwords": ["el", "la", "los", "las", "un", "una", "unos", "unas", "de", "del", "al", "a", "en", "con", "sin", "por", "para", "y", "o", "pero", "si", "que", "quien", "cuyo", "no", "es", "son", "era", "ser", "estar", "está", "ha", "han", "he", "yo", "tú", "él", "ella", "nosotros", "vosotros", "ellos", "se", "su", "sus", "mi", "mis", "lo", "como", "más", "también", "ya", "muy", "me", "te", "le", "les"],
+    "categories": {
+      "questions": {"pos": "prefix", "terms": ["qué", "cómo", "por qué", "cuándo", "dónde", "quién", "cuál", "cuáles", "cuánto", "cuántos", "es", "se puede", "hay", "cómo hacer"]},
+      "prepositions": {"pos": "both", "terms": ["para", "con", "sin", "cerca de", "en", "sobre", "desde", "hasta", "después de", "antes de", "contra", "durante", "bajo"]},
+      "comparatives": {"pos": "suffix", "terms": ["o", "vs", "contra", "alternativa a", "mejor que", "en lugar de", "comparado con"]},
+      "commercial": {"pos": "suffix", "terms": ["precio", "coste", "barato", "mejor", "opiniones", "reseñas", "comprar", "gratis", "oferta", "cerca de mí"]}
+    }
+  }
+}
