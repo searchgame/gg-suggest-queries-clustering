@@ -229,7 +229,7 @@ with st.sidebar.expander("Labelling"):
 st.title("Google Suggest Clustering Tool")
 
 st.markdown(
-    "Expands a seed query across a language-aware seed grid, embeds the suggestions locally with Ollama, and groups them by simmilar topic. Made by [Victor Gras](https://victorgras.com/).")
+    "Expands a seed query across a language-aware seed grid, embeds the suggestions locally with Ollama, and groups them by similar subtopic. Made by [Victor Gras](https://victorgras.com/).")
 
 query = st.text_input("Base search query", placeholder="e.g. recette crêpes")
 
