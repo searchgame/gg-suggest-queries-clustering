@@ -2,28 +2,33 @@
 
 # Google Suggest Queries Clustering (with local Ollama models)
 
-Expands a seed query across a language-aware seed grid, embeds the suggestions locally with Ollama, and groups them by similar subtopic using UMAP & HDBSCAN.
+Expands a seed query across a language-aware seed grid, fetches Google Suggests, embeds the suggestions locally with Ollama, and groups them by similar subtopic using UMAP & HDBSCAN.
 
 ![Tool Overview Screenshot](assets/gg-suggests-tool-overview.png)
 
 > [!NOTE]
-> * The purpose of this tool is to experiment with relatively small, locally stored large language models.
-> * _Add how to use/not-use the tool: "Google Suggest Queries clusters should not be used..."_
+> * The original purpose of this tool is to experiment with relatively small, locally stored large language models (like <2GB footprint), on real consumer hardware (my machine is a Macbook 2020 with M1 chip & 16GB RAM, 250GB storage). You can, of course, get better results with larger models than the ones I give as examples below.
+
+## Prerequisites
+
+Have Ollama installed with at least one embedding model (for clustering), and optionally one inference model (for cluster naming). If you don't, install Ollama and then:
+
+```bash
+ollama pull [EMBEDDING_MODEL_NAME]   # embedding model for clustering, for example 'embeddinggemma:300m'
+ollama pull [INFERENCE_MODEL_NAME]   # optional, inference model for LLM cluster naming, for example 'llama3.2'
+```
+
+See available models in the Ollama library: https://ollama.com/library
 
 ## Setup
+
+In your project directory:
 
 ```bash
 pip install -r requirements.txt
 
-ollama pull qwen3-embedding:0.6b   # embeddings
-ollama pull llama3.2               # optional, for LLM cluster naming
-
 streamlit run app.py
 ```
-
-`numpy` is pinned below 2.0 because the `hdbscan` wheel is compiled against the
-numpy 1.x ABI. Optional extras: `openpyxl` enables the XLSX export, `pytest`
-runs the suite.
 
 ## Using it
 
