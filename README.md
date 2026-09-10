@@ -4,7 +4,17 @@
 
 Expands a seed query across a language-aware seed grid, fetches Google Suggests, embeds the suggestions locally with Ollama, and groups them by similar subtopic using UMAP & HDBSCAN.
 
+Table of contents:
+- [Notes](#notes)
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Adding a language](#adding-a-language)
+- [App structure](#app-structure)
+
 ![Tool Overview Screenshot](assets/gg-suggests-tool-overview.png)
+
+## Notes
 
 > [!NOTE]
 > * The original purpose of this tool is to experiment with relatively small, locally stored large language models (like <2GB footprint), on real consumer hardware (my machine is a Macbook 2020 with M1 chip & 16GB RAM, 250GB storage). You can, of course, get better results with larger models than the ones I give as examples below.
@@ -20,7 +30,7 @@ ollama pull [INFERENCE_MODEL_NAME]   # optional, inference model for LLM cluster
 
 See available models in the Ollama library: https://ollama.com/library
 
-## Setup
+## Installation
 
 In your project directory:
 
@@ -30,15 +40,15 @@ pip install -r requirements.txt
 streamlit run app.py
 ```
 
-## Using it
+## Usage
 
-1. Pick a **country** (`gl`) and **language** (`hl`) in the sidebar. They are
-   deliberately independent — `CH` searches in de, fr *and* it.
+1. Pick a **country** (`GL`) and **language** (`hl`) in the sidebar. They are
+   deliberately independent. For example, `CH` (Switzerland) users searches in `de` (german), `fr` (french) *and* `it` (italian).
 2. Tick the seed categories you want. The caption under the query box shows how
    many requests the run will make before you commit to it.
 3. Enter a query and press **Run**.
 
-Everything below the Sources block — clustering, visualization, labelling — is
+Everything below the Sources block (clustering, visualization, labelling) is
 live. Changing it re-renders without re-fetching.
 
 ### The Diagnostics tab
@@ -84,7 +94,7 @@ prompt can name the language.
 The file must stay UTF-8. It is read with an explicit `encoding="utf-8"`, since
 Python otherwise defaults to the platform encoding and would fail on `ö`.
 
-## Layout
+## App structure
 
 ```
 app.py              Streamlit UI + the cache layer, and nothing else
