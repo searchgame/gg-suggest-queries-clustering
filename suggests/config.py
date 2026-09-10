@@ -11,11 +11,10 @@ from dataclasses import dataclass, field
 
 DEFAULT_OLLAMA_HOST = "http://localhost:11434"
 
-# Google's `gl` parameter takes ISO 3166-1 alpha-2. The old app sent "UK",
-# which is not a valid code - the United Kingdom is "GB".
+# Google's `gl` parameter 
 COUNTRIES: dict[str, str] = {
     "US": "United States",
-    "GB": "United Kingdom",
+    "UK": "United Kingdom",
     "CA": "Canada",
     "FR": "France",
     "BE": "Belgium",
@@ -27,6 +26,7 @@ COUNTRIES: dict[str, str] = {
     "ES": "Spain",
 }
 
+# Google's `hl` parameter
 LANGUAGES: dict[str, str] = {
     "en": "English",
     "fr": "Français",
