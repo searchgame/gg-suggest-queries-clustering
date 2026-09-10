@@ -4,15 +4,15 @@
 
 Expands a seed query across a language-aware seed grid, fetches Google Suggests, embeds the suggestions locally with Ollama, and groups them by similar subtopic using UMAP & HDBSCAN.
 
-Table of contents:
+![Tool Overview Screenshot](assets/gg-suggests-tool-overview.png)
+
+**Table of contents:**
 - [Notes](#notes)
 - [Prerequisites](#prerequisites)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Adding a language](#adding-a-language)
 - [App structure](#app-structure)
-
-![Tool Overview Screenshot](assets/gg-suggests-tool-overview.png)
 
 ## Notes
 
