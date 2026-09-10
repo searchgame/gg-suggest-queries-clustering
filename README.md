@@ -42,11 +42,12 @@ streamlit run app.py
 
 ## Usage
 
-1. Pick a **country** (`GL`) and **language** (`hl`) in the sidebar. They are
+1. By default, Ollama runs on `http://localhost:11434/`. The embedding models available on your machine will appear automatically in the dropdown menu. If nothing gets listed, either verify on which port Ollama is running and add the right one to the `Host` field, or verify that you have at least one embedding model installed (in your terminal: `ollama list`). 
+2. Pick a **country** (`GL`) and **language** (`hl`) in the sidebar. They are
    deliberately independent. For example, `CH` (Switzerland) users searches in `de` (german), `fr` (french) *and* `it` (italian).
-2. Tick the seed categories you want. The caption under the query box shows how
+3. Tick the seed categories you want. The caption under the query box shows how
    many requests the run will make before you commit to it.
-3. Enter a query and press **Run**.
+5. Enter a query and press **Run**.
 
 Everything below the Sources block (clustering, visualization, labelling) is
 live. Changing it re-renders without re-fetching.
