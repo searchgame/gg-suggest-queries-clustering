@@ -17,7 +17,12 @@ Expands a seed query across a language-aware seed grid, fetches Google Suggests,
 ## Notes
 
 > [!NOTE]
-> * The original purpose of this tool is to experiment with relatively small, locally stored large language models (like <2GB footprint), on real consumer hardware (my machine is a Macbook 2020 with M1 chip & 16GB RAM, 250GB storage). You can, of course, get better results with larger models than the ones I give as examples below.
+> * The original intent of this tool is to experiment with relatively small, locally stored large language models (like <2GB footprint), on real consumer hardware (my machine is a Macbook 2020 with M1 chip & 16GB RAM, 250GB storage). You can, of course, get better results with larger models than the ones I give as examples below.
+
+## Goal
+
+The purpose of this tool is to identify the dominant sub-topics of interest related to a central topic (seed query) in a specific [language + region] combination. This is done by expanding the seed query with Google Suggests and clustering the suggested queries using LLM embeddings and a clustering algorithm. 
+Here is an example of one identified cluster for the seed query "steuererklärung" ("tax declaration") with the target de-DE:
 
 ## Prerequisites
 
