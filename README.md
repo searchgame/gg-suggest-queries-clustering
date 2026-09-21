@@ -7,15 +7,12 @@ Expands a seed query across a language-aware seed grid, fetches Google Suggests,
 ![Tool Overview Screenshot](assets/gg-suggests-tool-overview.png)
 
 **Table of contents:**
-- [Notes](#notes)
 - [Goal](#goal)
 - [Prerequisites](#prerequisites)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Adding a language](#adding-a-language)
 - [App structure](#app-structure)
-
-## Notes
 
 > [!NOTE]
 > * The original intent of this tool is to experiment with relatively small, locally stored large language models (like <2GB footprint), on real consumer hardware (my machine is a Macbook 2020 with M1 chip & 16GB RAM, 250GB storage). You can, of course, get better results with larger models than the ones I give as examples below.
@@ -30,7 +27,7 @@ Here is an example of one identified cluster for the seed query "steuererklärun
   <img width="50%" src="assets/example-query-cluster.png">
 </p>  
 
-The identified cluster is about "steuererklärung für rentner" (tax declaration/return for pensioners). The interesting part is that it identifies queries that doesn't share the same lexical pattern ("rentner") but are still related semantically (blue squares on the screenshot).
+The identified cluster is about "steuererklärung für rentner" (tax declaration/return for pensioners). The interesting part is that it also identifies queries that doesn't share the same lexical pattern ("rentner") but are still related semantically (blue squares on the screenshot).
 
 ## Prerequisites
 
