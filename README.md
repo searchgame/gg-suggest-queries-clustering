@@ -8,6 +8,7 @@ Expands a seed query across a language-aware seed grid, fetches Google Suggests,
 
 **Table of contents:**
 - [Notes](#notes)
+- [Goal](#goal)
 - [Prerequisites](#prerequisites)
 - [Installation](#installation)
 - [Usage](#usage)
@@ -22,7 +23,14 @@ Expands a seed query across a language-aware seed grid, fetches Google Suggests,
 ## Goal
 
 The purpose of this tool is to identify the dominant sub-topics of interest related to a central topic (seed query) in a specific [language + region] combination. This is done by expanding the seed query with Google Suggests and clustering the suggested queries using LLM embeddings and a clustering algorithm. 
+
 Here is an example of one identified cluster for the seed query "steuererklärung" ("tax declaration") with the target de-DE:
+
+<p align="center">
+  <img width="50%" src="assets/example-query-cluster.png">
+</p>  
+
+The identified cluster is about "steuererklärung für rentner" (tax declaration/return for pensioners). The interesting part is that it identifies queries that doesn't share the same lexical pattern ("rentner") but are still related semantically (blue squares on the screenshot).
 
 ## Prerequisites
 
